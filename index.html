@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Признание в любви</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .heart {
+            font-size: 4rem;
+            color: #e91e63;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #e91e63;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #c2185b;
+        }
+        .no-button {
+            background-color: #555;
+        }
+        .no-button:hover {
+            background-color: #333;
+        }
+        #response {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>❤️ Признание в любви ❤️</h1>
+
+    <p>Ты — самое прекрасное, что случилось в моей жизни. Я люблю тебя всем сердцем и хочу, чтобы ты всегда это знала!</p>
+
+    <div class="heart">💖</div>
+
+    <!-- Две кнопки для ответа -->
+    <button class="button" id="yesButton">Ответить взаимностью 💕</button>
+    <button class="button no-button" id="noButton">Сказать "нет" 😢</button>
+
+    <p id="response"></p>
+
+    <script>
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const response = document.getElementById('response');
+
+        yesButton.addEventListener('click', function() {
+            response.textContent = 'Ты тоже меня любишь! 🥰';
+            response.style.color = '#4caf50'; // Зелёный цвет текста
+        });
+
+        noButton.addEventListener('click', function() {
+            response.textContent = 'К сожалению, это невзаимно... 😔';
+            response.style.color = '#e91e63'; // Розовый цвет текста
+        });
+    </script>
+
+</body>
+</html>
